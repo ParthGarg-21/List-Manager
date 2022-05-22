@@ -74,7 +74,7 @@ body {
     padding: 0 0.5rem;
     justify-content: space-between;
     cursor: pointer;
-    margin-bottom: .5rem;
+    /* margin-bottom: .5rem; */
 
 }
 
@@ -99,7 +99,7 @@ body {
 
 /* Class which will be added to an item when it is selected */
 
-.selected-item{
+.selected-item, .list-item:hover{
     color: #fff;
     background-color: #035ecf;
 }
