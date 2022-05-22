@@ -10,43 +10,32 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* font-family: 'Noto Sans', sans-serif; */
     font-family: Arial, Helvetica, sans-serif;
-
 }
-/* Styling for the main container, that holds the entire app */
 
+/* Style for the main container, that holds the entire app. */
 .main {
     height: 97%;
     width: 950px;
-    /* border: 3px solid black;  */
     display: flex;
     justify-content: center;
     padding-top: 1rem;
 }
 
-/* The containers which contain the items list and the image and the tile */
-
+/* The containers which contain the items list and the image and the tile. */
 .container {
-
     height: 100%;
-    /* border: 2px solid black; */
 }
 
-/* The container which contains all the list items */
-
+/* The container which contains all the list items. */
 .items-container {
-    /* border: 5px solid brown;  */
-    overflow: scroll; /* In Case the number of items exceed the size of the container */
+    overflow: scroll;                                 /* In Case the number of items exceed the size of the container. */
     width: 300px;
     margin-right: 10px;
 }
 
-
-/* The container that contains the main image and the main image title */
-
+/* The container that contains the main image and the main image title. */
 .img-title-container {
-    /* border: 5px solid gray;  */
     width: 500px;
     margin-left: 10px;
     display: flex;
@@ -54,20 +43,16 @@ body {
     justify-content: space-between;
 }
 
-/* The list which contains all the list items */
-
+/* The list which contains all the list items. */
 .items-list {    
     list-style: none;
-    /* border: 1px solid black; */
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-/* Each list item which holds and image and its corresponding title */
-
+/* Each list item which holds and image and its corresponding title. */
 .list-item {  
-    /* border: 2px solid yellow; */
     transition: all;
     transition-duration: 0.25s;
     border-radius: 5px;
@@ -78,20 +63,16 @@ body {
     padding: 0 0.5rem;
     justify-content: space-between;
     cursor: pointer;
-    /* margin-bottom: .5rem; */
-
 }
 
-/* Images in each list item */
-
+/* Images in each list item. */
 .list-img {
     border-radius: 5px;
     height: 75%;
     width: 15%;
 }
 
-/* Title of each list image */
-
+/* Title of each list image. */
 .list-title {
     height: 75%;
     width: 81%;
@@ -101,45 +82,37 @@ body {
     font-weight: 400;
 }
 
-/* Class which will be added to an item when it is selected */
-
+/* Class which will be added to an item when it is selected. */
 .active {
     color: #fff;
     background-color: #035ecf;
 }
 
-/* The container which holds the main image */
-
+/* The container which holds the main image. */
 .image-container {
     height: 93%;
-
 }
 
-/* The container which holds the main title */
-
+/* The container which holds the main title. */
 .title-container {
-    
     height: 7%;
 }
 
-/* The main title */
-
+/* The main title. */
 .main-title {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     border: none;
-    /* color: rgb(135, 135, 135); */
     height: 100%;
     width: 100%;
     padding:  5px 0;
     font-size: 16px;
     resize: none;
     color: gray;
-
+    background-color:white;
 }
 
-/* The main image */
-
+/* The main image. */
 .main-image {
     border-radius: 5px;
     height: 100%;
