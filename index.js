@@ -84,7 +84,7 @@ function updateImageTitle() {
     const currURL = sourceItems[globalIndex].previewImage;
     const currTitle = sourceItems[globalIndex].title;
     mainImg.setAttribute("src", currURL);
-    // mainTitle.value = currTitle;
+    mainTitle.value = currTitle;
 }
 
 // Click
@@ -111,7 +111,9 @@ function handleKeyPress(event) {
         globalIndex--;
     } else if (key === "ArrowDown") {
         globalIndex++;
-    } 
+    } else {
+        return;
+    }
     globalIndex = (globalIndex + sourceItems.length) % sourceItems.length;
 
     updateImageTitle();
@@ -119,7 +121,19 @@ function handleKeyPress(event) {
 }
 
 // ----------------------------
+// module for the input event
 
+mainTitle.addEventListener("input", handleChangeTilte)
+
+function handleChangeTilte() {
+    console.log(mainTitle.value);
+    const newTitle = mainTitle.value;
+    sourceItems[globalIndex].title = newTitle;
+    const shortenedTitle = shortenTitle(newTitle);
+    allTitles[globalIndex].innerText = shortenedTitle;
+}
+
+// ----------------------------
 
 // Function to shorten the title so that it fits inside the list container
 

@@ -10,41 +10,45 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-family: 'Noto Sans', sans-serif;
+    /* font-family: 'Noto Sans', sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 /* Styling for the main container, that holds the entire app */
 
 .main {
-    height: 92.5%;
+    height: 97%;
     width: 950px;
-    border: 3px solid; 
+    /* border: 3px solid black;  */
     display: flex;
     justify-content: center;
-    padding: .5rem 0;
+    padding-top: 1rem;
 }
 
 /* The containers which contain the items list and the image and the tile */
 
 .container {
+
     height: 100%;
+    /* border: 2px solid black; */
 }
 
 /* The container which contains all the list items */
 
 .items-container {
-    border: 5px solid brown; 
+    /* border: 5px solid brown;  */
     overflow: scroll; /* In Case the number of items exceed the size of the container */
     width: 300px;
-    margin-right: 12.5px;
+    margin-right: 10px;
 }
 
 
 /* The container that contains the main image and the main image title */
 
 .img-title-container {
-    border: 5px solid gray; 
-    width: 550px;
-    margin-left: 12.5px;
+    /* border: 5px solid gray;  */
+    width: 500px;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -54,7 +58,7 @@ body {
 
 .items-list {    
     list-style: none;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -93,7 +97,7 @@ body {
     width: 81%;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -107,25 +111,31 @@ body {
 /* The container which holds the main image */
 
 .image-container {
-    height: 94%;
+    height: 93%;
+
 }
 
 /* The container which holds the main title */
 
 .title-container {
-    height: 5%;
+    
+    height: 7%;
 }
 
 /* The main title */
 
 .main-title {
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     border: none;
-    color: rgb(135, 135, 135);
+    /* color: rgb(135, 135, 135); */
     height: 100%;
     width: 100%;
-    padding:  0 .5rem;
-    font-size: 14px;
+    padding:  5px 0;
+    font-size: 16px;
+    resize: none;
+    color: gray;
+
 }
 
 /* The main image */
