@@ -99,7 +99,7 @@ body {
 
 /* Class which will be added to an item when it is selected */
 
-.selected-item, .list-item:hover{
+.active {
     color: #fff;
     background-color: #035ecf;
 }
