@@ -1,4 +1,39 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    border: 5px solid;  /* Remove */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    height: 95%;
+    width: 950px;
+    background-color: red;  /* Remove */
+    border: 3px solid; /* Remove */
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0;
+}
+
+.container {
+    border: 5px solid brown; /* Remove */
+    height: 100%;
+}
+
+.items-container {
+    width: 300px;
+    margin-right: 12.5px;
+}
+
+.img-title-container {
+    width: 570px;
+    margin-left: 12.5px;
 }
