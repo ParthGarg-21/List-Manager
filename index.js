@@ -73,7 +73,7 @@ for (let item of allItems) {
 
 function handleClick() {
     const currItem = this;
-    const itemIdx = currItem.getAttribute("id");
+    const itemIdx = Number(currItem.getAttribute("id"));
     globalIndex = itemIdx;
     updateImageTitle();
     updateActiveClass();
@@ -84,7 +84,7 @@ function updateImageTitle() {
     const currURL = sourceItems[globalIndex].previewImage;
     const currTitle = sourceItems[globalIndex].title;
     mainImg.setAttribute("src", currURL);
-    mainTitle.value = currTitle;
+    // mainTitle.value = currTitle;
 }
 
 // Click
@@ -92,7 +92,7 @@ function updateImageTitle() {
 
 // Function to change the current highlighted class
 
-function updateActiveClass(idx) {
+function updateActiveClass() {
     for (let item of allItems) {
         item.classList.remove("active");
     }
@@ -107,12 +107,11 @@ document.addEventListener("keydown", handleKeyPress);
 
 function handleKeyPress(event) {
     const key = event.key;
-    if (key == "ArrowUp") {
+    if (key === "ArrowUp") {
         globalIndex--;
-    } else if (key == "ArrowDown") {
+    } else if (key === "ArrowDown") {
         globalIndex++;
-    }
-
+    } 
     globalIndex = (globalIndex + sourceItems.length) % sourceItems.length;
 
     updateImageTitle();
