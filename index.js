@@ -12,7 +12,7 @@ const list = document.querySelector(".items-list");
 
 const maxTitleLen = 27; // Max length allowed of the list item title
 
-let index = 0; // A pointer/iterator to point to the current selected item
+let globalIndex = 0; // A pointer/iterator to point to the current selected item
 
 sourceItems.forEach(createItems);                    // For each loop on the sourceItems array to build the items list
 
@@ -74,18 +74,20 @@ for (let item of allItems) {
 function handleClick() {
     const currItem = this;
     const itemIdx = currItem.getAttribute("id");
-    index = itemIdx;
+    globalIndex = itemIdx;
     updateImageTitle();
     updateActiveClass();
 }
 
 
 function updateImageTitle() {
-    const currURL = sourceItems[index].previewImage;
-    const currTitle = sourceItems[index].title;
+    const currURL = sourceItems[globalIndex].previewImage;
+    const currTitle = sourceItems[globalIndex].title;
     mainImg.setAttribute("src", currURL);
     mainTitle.value = currTitle;
 }
+
+// Click
 
 
 // Function to change the current highlighted class
@@ -94,7 +96,27 @@ function updateActiveClass(idx) {
     for (let item of allItems) {
         item.classList.remove("active");
     }
-    allItems[index].classList.add("active");
+    allItems[globalIndex].classList.add("active");
+}
+
+// ---------------------------
+
+// KeyDown Event
+
+document.addEventListener("keydown", handleKeyPress);
+
+function handleKeyPress(event) {
+    const key = event.key;
+    if (key == "ArrowUp") {
+        globalIndex--;
+    } else if (key == "ArrowDown") {
+        globalIndex++;
+    }
+
+    globalIndex = (globalIndex + sourceItems.length) % sourceItems.length;
+
+    updateImageTitle();
+    updateActiveClass();
 }
 
 // ----------------------------
