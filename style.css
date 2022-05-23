@@ -25,11 +25,14 @@ body {
 /* The containers which contain the items list and the image and the tile. */
 .container {
     height: 100%;
+    box-shadow: 2px 2px 10px #d7d7d7;
+    border-radius: 5px;
 }
 
 /* The container which contains all the list items. */
 .items-container {
-    overflow: scroll;                                 /* In Case the number of items exceed the size of the container. */
+    overflow-y: scroll;                                 /* In Case the number of items exceed the size of the container. */
+    overflow-x: hidden;
     width: 300px;
     margin-right: 10px;
     max-height: 93%;
@@ -112,6 +115,7 @@ body {
     resize: none;
     color: gray;
     background-color:white;
+    border-radius: 5px;
 }
 
 /* The main image. */
